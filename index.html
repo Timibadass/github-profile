@@ -4,9 +4,79 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Your Repositories</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="/assets/css/reset.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <script src="https://kit.fontawesome.com/09e6cc80ab.js" crossorigin="anonymous" defer></script>
+    <script src="./assets/js/main.js" defer></script>
 </head>
-<header></header>
+<header class="header">
+    <button class="header__button header__button--big">
+      <i class="fas fa-bars" id="navButton"></i>
+    </button>
+    <img src="./assets/images/logo.png" alt="GitHub Logo" class="header__logo" />
+    <button class="header__button header__button--small">
+      <i class="far fa-bell"></i>
+      <div class="notification__div"></div>
+    </button>
+    <nav class="header__nav">
+        <form class="search__form">
+            <label for="search" class="form__label">
+          <input
+            type="search"
+            name="search"
+            id="search"
+            class="search__field"
+            placeholder="Search or Jump to..."
+          />
+          <button class="search__button">/</button>
+        </label>
+        </form>
+        <ul class="nav__lists">
+            <li class="nav__list nav__list--mobile">
+                <a href="#" rel="noopener noreferrer">Dashboard</a>
+            </li>
+            <li class="nav__list nav__list--mobile">
+                <a href="#" rel="noopener noreferrer">Pull Requests</a>
+            </li>
+            <li class="nav__list nav__list--big">
+                <a href="#" rel="noopener noreferrer">Pulls</a>
+            </li>
+            <li class="nav__list">
+                <a href="#" rel="noopener noreferrer">Issues</a>
+            </li>
+            <li class="nav__list">
+                <a href="#" rel="noopener noreferrer">Marketplace</a>
+            </li>
+            <li class="nav__list">
+                <a href="#" rel="noopener noreferrer">Explore</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="user__div">
+        <img src="./assets/images/logo.png" alt="" class="user__image" />
+        <p class="user__name">Thee badass</p>
+    </div>
+    <button class="header__button user__div--button">
+      <img src="./assets/images/logo.png" alt="" class="user__image" />
+      <i class="fas fa-sort-down"></i>
+    </button>
+    <button class="header__button repo-actions__button">
+      <i class="fas fa-plus"></i>
+      <i class="fas fa-sort-down"></i>
+    </button>
+    <div class="actions__div">
+        <div class="action">
+            <img src="./assets/images/logout.svg" alt="logout icon" class="action__icon" />
+            <p class="action__text user__name">Sign out</p>
+        </div>
+    </div>
+</header>
 
 <body></body>
 <footer></footer>
