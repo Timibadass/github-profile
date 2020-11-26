@@ -12,7 +12,10 @@
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="stylesheet" href="/assets/css/reset.css" />
     <link rel="stylesheet" href="/assets/css/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script src="https://kit.fontawesome.com/09e6cc80ab.js" crossorigin="anonymous" defer></script>
+    <script src="./assets/js/graphql.js"></script>
     <script src="./assets/js/main.js" defer></script>
 </head>
 <header class="header">
@@ -42,7 +45,7 @@
                 <a href="#" rel="noopener noreferrer">Dashboard</a>
             </li>
             <li class="nav__list nav__list--mobile">
-                <a href="#" rel="noopener noreferrer">Pull Requests</a>
+                <a href="#" rel="noopener noreferrer">Pull requests</a>
             </li>
             <li class="nav__list nav__list--big">
                 <a href="#" rel="noopener noreferrer">Pulls</a>
@@ -59,11 +62,11 @@
         </ul>
     </nav>
     <div class="user__div">
-        <img src="./assets/images/logo.png" alt="" class="user__image" />
-        <p class="user__name">Thee badass</p>
+        <img src="./assets/images/logo.png" alt="" id="headerImage" class="user__image user__avatar" />
+        <p class="user__name username"></p>
     </div>
     <button class="header__button user__div--button">
-      <img src="./assets/images/logo.png" alt="" class="user__image" />
+      <img src="" alt="" class="user__image user__avatar" />
       <i class="fas fa-sort-down"></i>
     </button>
     <button class="header__button repo-actions__button">
@@ -78,7 +81,103 @@
     </div>
 </header>
 
-<body></body>
+<body>
+    <main class="main">
+        <section class="profile__section">
+            <div class="profile-main__info">
+                <img src="" alt="Profile picture" class="profile__image user__avatar" />
+                <div class="profile__status--medium status__icon"></div>
+                <div class="profile-names__div">
+                    <p class="profile__name"></p>
+                    <p class="profile__username username"></p>
+                </div>
+            </div>
+            <div class="profile__status">
+                <div class="status__icon"></div>
+                <p class="status__text" id="statusMessage"></p>
+            </div>
+            <p class="profile__bio"></p>
+            <button class="profile__button">Edit profile</button>
+            <div class="profile__extras">
+                <div class="profile__extra profile__extra--location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p class="profile-extra__text" id="location"></p>
+                </div>
+                <div class="profile__extra">
+                    <i class="far fa-envelope"></i>
+                    <p class="profile-extra__text" id="email"></p>
+                </div>
+                <div class="profile__extra">
+                    <i class="fas fa-link"></i>
+                    <a href="" class="profile-extra__text" id="profileUrl"> </a>
+                </div>
+                <div class="profile__extra following">
+                    <p class="profile-extra__text profile-extra__text--grey">
+                        <i data-feather="users" class="profile__icon profile__icon--svg"></i>
+                        <span id="followers" class="bold"></span> Followers ·
+                    </p>
+                    <p class="profile-extra__text profile-extra__text--grey">
+                        <span id="following" class="bold"></span> Following ·
+                    </p>
+
+                    <p class="profile-extra__text">
+                        <i class="far fa-star"></i>
+                        <span id="starCount" class="bold"></span>
+                    </p>
+                </div>
+                <div class="profile__extra profile__extra--twitter">
+                    <i class="fab fa-twitter"></i>
+                    <a href="" class="profile-extra__text" id="twitter"></a>
+                </div>
+            </div>
+        </section>
+        <nav class="tab__nav">
+            <ul class="tab__lists">
+                <li class="tab__list">
+                    <div class="tab__icon">
+                        <i class="ri-book-open-line"></i>
+                    </div>
+                    Overview
+                </li>
+                <li class="tab__list tab__list--active">
+                    <div class="tab__icon">
+                        <i class="ri-book-mark-line"></i>
+                    </div>
+                    Repositories <span class="repo__number"></span>
+                </li>
+                <li class="tab__list">
+                    <div class="tab__icon">
+                        <i class="ri-bar-chart-box-line"></i>
+                    </div>
+                    Projects
+                </li>
+                <li class="tab__list">
+                    <div class="tab__icon">
+                        <i data-feather="box"></i>
+                    </div>
+                    Packages
+                </li>
+            </ul>
+        </nav>
+        <section class="main__section">
+            <form class="tab-search__form">
+                <label for="Repositories search">
+            <input
+              type="search"
+              name="Repositories search"
+              id="repoSearch"
+              class="tab-search__field"
+              placeholder="Find a repository..."
+            />
+          </label>
+            </form>
+            <ul class="repo__list" id="repoContainer"></ul>
+        </section>
+    </main>
+</body>
 <footer></footer>
 
 </html>
+<script>
+    feather.replace();
+</script>
