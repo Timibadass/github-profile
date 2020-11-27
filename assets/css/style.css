@@ -336,6 +336,27 @@ input[type="search"].search__field {
     margin-bottom: 20px;
 }
 
+.nav-user__profile {
+    display: none;
+    height: 50px;
+}
+
+.nav-user__image {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.nav__username {
+    color: #000;
+}
+
+.nav-user__profile--flex {
+    display: flex;
+    align-items: center;
+}
+
 .tab__lists {
     width: 430px;
     height: 100%;
@@ -608,10 +629,15 @@ input[type="search"].tab-search__field {
         width: 100vw;
         height: 50px;
         z-index: 2;
+        margin: 0;
+        display: flex;
+    }
+    .nav__user {
+        width: 150px;
+        margin-right: 220px;
     }
     .tab__lists {
         padding-top: 0;
-        margin-left: 25%;
         width: 600px;
         border: 0;
     }
@@ -717,7 +743,6 @@ input[type="search"].tab-search__field {
     .main__section {
         order: 2;
         width: 68%;
-        margin-top: 50px;
     }
 }
 
@@ -776,6 +801,10 @@ input[type="search"].tab-search__field {
 }
 
 @media (min-width: 1300px) {
+    .nav__user {
+        margin-left: 80px;
+        margin-right: 110px;
+    }
     .profile__section {
         max-width: 300px;
     }
