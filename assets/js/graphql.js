@@ -48,7 +48,7 @@ let request = {
 let url = 'https://api.github.com/graphql'
 let body = JSON.stringify(request)
 
-let token = 'd26d89a571feed0408be790ed0fe89a41adf33a6'
+let token = 'f4051ed480c5fea60d26c1dffd19586a71487b3d'
 let options = {
     method: "POST",
     headers: {
