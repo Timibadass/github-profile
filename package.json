@@ -4,7 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "build": "webpack",
+        "build": "webpack --mode production",
         "serve": "./node_modules/.bin/http-server"
     },
     "repository": {
@@ -19,7 +19,11 @@
     },
     "homepage": "https://github.com/Timibadass/github-profile#readme",
     "devDependencies": {
+        "@babel/core": "^7.12.9",
+        "@babel/preset-env": "^7.12.7",
+        "babel-loader": "^8.2.2",
         "css-loader": "^5.0.1",
+        "html-webpack-plugin": "^4.5.0",
         "http-server": "^0.12.3",
         "style-loader": "^2.0.0",
         "webpack": "^5.9.0",
