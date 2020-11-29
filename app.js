@@ -1,4 +1,4 @@
-require('./assets/js/graphql');
-require('./assets/js/main');
-require('./assets/css/reset.css')
-require('./assets/css/style.css')
+import './assets/js/graphql';
+import './assets/js/main';
+import './assets/css/reset.css'
+import './assets/css/style.css'
