@@ -19,6 +19,7 @@ let callback = (entries) => {
         let screenSize = window.screen.width
         if (screenSize >= 768 && entry.intersectionRatio === 0) {
             tabNavProfileContainerClassList.add('nav-user__profile--flex')
+            console.log(entry.intersectionRatio);
         } else {
             tabNavProfileContainerClassList.remove('nav-user__profile--flex')
         }
