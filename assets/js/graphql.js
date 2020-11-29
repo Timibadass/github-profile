@@ -1,4 +1,3 @@
-// require('dotenv').config()
 let request = {
     query: `query {
   viewer {
@@ -49,8 +48,7 @@ let request = {
 let url = 'https://api.github.com/graphql'
 let body = JSON.stringify(request)
 
-// let token = process.TOKEN
-let token = 'd26d89a571feed0408be790ed0fe89a41adf33a6'
+let token = process.env.TOKEN
 let options = {
     method: "POST",
     headers: {
